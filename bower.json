@@ -1,0 +1,23 @@
+{
+  "name": "angular-express-seed",
+  "description": "",
+  "main": "",
+  "authors": [
+    "JiangInk <JiangInk@foxmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/JiangInk/angular-express-seed",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8"
+  }
+}

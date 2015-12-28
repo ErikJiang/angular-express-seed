@@ -1,8 +1,14 @@
-body {
-  padding: 50px;
+* {
+  padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.theme-color {
+    color: #ffffff;
+    background-color: #269abc;
+}
+
+.margin-change {
+    margin: 4% 0% 2% 0%;
 }
