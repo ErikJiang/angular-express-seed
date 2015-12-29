@@ -26,6 +26,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routes handler
 routes(app);
 
+// render all others to the index (HTML5 history)
+app.use(function (req, res, next) {
+    console.log(req.path);
+    if(req.path.indexOf('/api')>=0){
+        res.send("server text");
+
+    }else{ //angular start page
+        res.render('index', {title: 'Angular-Express-Seed'});
+    }
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -60,5 +71,5 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-console.log('http://localhost:3000, running......');
+console.log('http://localhost:3000, running in %s mode', app.settings.env);
 

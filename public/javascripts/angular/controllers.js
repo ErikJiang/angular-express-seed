@@ -1,4 +1,8 @@
-app.controller('seedCtrl', ['$scope', function($scope) {
+'use strict';
+
+var seedControllers = angular.module('seedControllers', []);
+
+seedControllers.controller('panelCtrl', ['$scope', function($scope) {
     var vm = $scope.mv = {};
     $scope.query = '';
     $scope.orderProp = 'number';
@@ -34,4 +38,8 @@ app.controller('seedCtrl', ['$scope', function($scope) {
         url: "https://www.mongodb.org/",
         content: "MongoDB is an open-source, document database designed for ease of development and scaling. "
     }];
+}]);
+
+seedControllers.controller('testCtrl', ['$scope', function($scope) {
+    $scope.test = "hello! this is test page!"
 }]);

@@ -1,0 +1,40 @@
+<div class="panel panel-default" ng-class="{hidden: vm.hidden}">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="glyphicon glyphicon-th-list"></span>
+            show/hidden
+                    <span class="pull-right">
+                        <span class="glyphicon" ng-class="vm.collapsed?'glyphicon-chevron-down':'glyphicon-chevron-up'" ng-click="vm.collapsed = !vm.collapsed"></span>&nbsp;
+                        <span class="glyphicon glyphicon-remove" ng-click="vm.hidden = true"></span>
+                    </span>
+        </h4>
+    </div>
+    <div class="panel-collapse collapse" ng-class="{in: !vm.collapsed}">
+        <div class="panel-body">
+            <form class="form-inline margin-change">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon">search</div>
+                        <input type="text" class="form-control" ng-model="query"/>
+                    </div>
+                </div>
+                <select class="form-control" ng-model="orderProp">
+                    <option value="number">number</option>
+                    <option value="name">name</option>
+                </select>
+            </form>
+            <ul class="list-group" ng-repeat="list in listData |filter:query |orderBy:orderProp">
+                <li class="list-group-item">
+                    <h4>
+                        <a class="label label-info" href="{{ list.url }}">{{ list.name }}</a>
+                        <span class="badge">{{ list.number }}</span>
+                    </h4>
+                    <blockquote>
+                        <p>{{ list.content }}</p>
+                    </blockquote>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<span class="btn btn-primary" ng-click="vm.hidden = false" ng-if="vm.hidden">restart show</span>
