@@ -3,7 +3,7 @@ Angular &amp; Express 种子项目框架
 
 ![angular-express-seed](home.png "home page")
 
-方便迅速搭建基于 [Angular](https://angularjs.org/) 和 [Express](http://expressjs.com/)的Web应用项目；
+方便迅速搭建基于 [Angular](https://angularjs.org/) 和 [Express](http://expressjs.com/) 的Web应用项目；
 
 ## 如何使用
 
